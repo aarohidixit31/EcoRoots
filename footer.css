@@ -1,0 +1,19 @@
+footer {
+    background-color: #000;
+    text-align: center;
+}
+
+footer img {
+    width: 300px;
+    margin:-30px;
+}
+
+footer p {
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+footer div img {
+    width: 30px;
+    margin: 0 ;
+}

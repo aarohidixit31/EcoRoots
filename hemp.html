@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRoots Hemp Products</title>
+    <link rel="stylesheet" href="hemp.css">
+</head>
+<body>
+    <header>
+    
+        <div class="logo">
+            <img src="images/whitelogo.png" alt="logo" height="100px">
+        </div>
+
+        <div class="center">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        </div>
+
+        <div class="cart-icon"> 
+            <a href="cart.html"><img src="images/cart.png" height="30px"><span id="cart-count">0</span></a>
+        </div>
+    
+    </header>
+
+    <main>
+        <section id="products">
+            <div class="product">
+                <img src="https://149360778.v2.pressablecdn.com/wp-content/uploads/2019/09/81ajWtKKFUL._SL1500_.jpg" alt="Hemp Oil" height="150px" width="150px">
+                <h3>Organic Hemp Oil</h3>
+                <p>Pure, cold-pressed hemp seed oil</p>
+                <p class="price">₹1,500.00</p>
+                <button onclick="addToCart('Organic Hemp Oil', 1500.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/0063/4814/4709/products/466378_Hemp_Protein_New_Bag_Design_072619_2048x.jpg?v=1574275666" alt="Hemp Protein" height="150px" width="150px">
+                <h3>Hemp Protein Powder</h3>
+                <p>High-quality plant-based protein</p>
+                <p class="price">₹2,000.00</p>
+                <button onclick="addToCart('Hemp Protein Powder', 2000.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://i.etsystatic.com/9699639/r/il/4a6cb8/2426215071/il_1588xN.2426215071_4q2a.jpg" alt="Hemp Wallet" height="185px" width="185px">
+                <h3>Hemp Wallet</h3>
+                <p>High Quality Hemp Wallet</p>
+                <p class="price">₹500.00</p>
+                <button onclick="addToCart('Hemp Wallet', 500.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.cityhealth.com.au/assets/full/609728259181.jpg?20181203141611" alt="Hemp Seeds" height="150px" width="150px">
+                <h3>Organic Hemp Seeds</h3>
+                <p>Pure, Organic hemp seeds</p>
+                <p class="price">₹1,500.00</p>
+                <button onclick="addToCart('Organic Hemp Seeds', 1500.00)">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://149360778.v2.pressablecdn.com/wp-content/uploads/2019/09/81ajWtKKFUL._SL1500_.jpg" alt="Hemp Oil" height="150px" width="150px">
+                <h3>Organic Hemp Oil</h3>
+                <p>Pure, cold-pressed hemp seed oil</p>
+                <p class="price">₹1,500.00</p>
+                <button onclick="addToCart('Organic Hemp Oil', 1500.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://cdn.shopify.com/s/files/1/0063/4814/4709/products/466378_Hemp_Protein_New_Bag_Design_072619_2048x.jpg?v=1574275666" alt="Hemp Protein" height="150px" width="150px">
+                <h3>Hemp Protein Powder</h3>
+                <p>High-quality plant-based protein</p>
+                <p class="price">₹2,000.00</p>
+                <button onclick="addToCart('Hemp Protein Powder', 2000.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://i.etsystatic.com/9699639/r/il/4a6cb8/2426215071/il_1588xN.2426215071_4q2a.jpg" alt="Hemp Wallet" height="185px" width="185px">
+                <h3>Hemp Wallet</h3>
+                <p>High Quality Hemp Wallet</p>
+                <p class="price">₹500.00</p>
+                <button onclick="addToCart('Hemp Wallet', 500.00)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://www.cityhealth.com.au/assets/full/609728259181.jpg?20181203141611" alt="Hemp Seeds" height="150px" width="150px">
+                <h3>Organic Hemp Seeds</h3>
+                <p>Pure, Organic hemp seeds</p>
+                <p class="price">₹1,500.00</p>
+                <button onclick="addToCart('Organic Hemp Seeds', 1500.00)">Add to Cart</button>
+            </div>      
+        </section>
+    </main> 
+<script>let cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cartCount = cart.length;
+
+function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    cartCount++;
+    updateCartIcon();
+    saveCart();
+}
+
+function updateCartIcon() {
+    document.getElementById('cart-count').textContent = cartCount;
+}
+
+function saveCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+updateCartIcon();
+</script>
+</html>

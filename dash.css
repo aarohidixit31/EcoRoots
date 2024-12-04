@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: #4C7F4C; 
+}
+
+h1,
+h2.skill-title {
+    color: #2F5132; /* Darker Green */
+}
+
+body {
+    background: linear-gradient(35deg, #6BBF59, #4C7F4C, #3D6E40); /* Shades of green */
+    min-height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+
+.dashboard {
+    width: 80%;
+    min-height: 80vh;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, .6), rgba(255, 255, 255, .3));
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-radius: 1rem;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    z-index: 3;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+    overflow-y: auto; 
+    max-height: 90vh; 
+}
+
+
+.sidebar {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    align-items: center;
+    background-color: rgba(255, 255, 255, .2);
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img-box {
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+}
+
+.profile-img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.name {
+    margin-top: 1rem;
+    color: #2F5132;
+}
+
+.active {
+    color: #6BBF59;
+}
+
+.pro-text{
+    color:#fff;
+}
+
+.pro-img-box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 1rem;
+}
+
+.pro {
+    display: flex;
+    align-items: center;
+    background-color: #4C7F4C;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+
+.pro:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* main */
+
+.main {
+    padding: 2rem;
+    height: max-content;
+}
+
+.skill {
+    background-color: rgba(255, 255, 255, .4);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: .3s;
+}
+
+.skill:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.skill-content {
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.skill-img-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin-right: 1rem;
+    overflow: hidden; 
+}
+
+.skill-img-box img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+}
+
+.skill-detail {
+    width: 100%;
+}
+
+.skill-title {
+    color: #2F5132;
+}
+
+.skill-progress {
+    position: relative;
+    height: 1rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #4C7F4C;
+}
+
+.progress-
+
+.progress-1 {
+    width: 60%;
+}
+
+.progress-2 {
+    width: 40%;
+}
+
+.progress-3 {
+    width: 80%;
+}
+
+.percent {
+    color: #4C7F4C;
+}
+.percent .button{
+        display: inline-block;
+        background:#4C7F4C; 
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 7px;
+        font-size: 15px;
+        font-weight: 700;
+        border:none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+    }
+
+.percent .button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* circles */
+
+.circle-1 {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(0, 255, 140);
+    position: absolute;
+    border-radius: 50%;
+    top: 5%;
+    right: 13%;
+}
+
+.circle-2 {
+    height: 300px;
+    width: 300px;
+    background-color: #d3dfdb;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -5%;
+    left: 10%;
+}
+
+.circle-3 {
+    height: 100px;
+    width: 100px;
+    background-color: #35d19d;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 65%;
+    left: 40%;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1024px) {
+    .dashboard {
+        width: 90%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    .profile {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .name {
+        margin-top: 0;
+        margin-left: 1rem;
+    }
+
+    .main {
+        padding: 1.5rem;
+    }
+
+    .skill {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+
+
+
+    .percent {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dashboard {
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        border-radius: 0;
+    }
+
+    .main {
+        padding: 1rem;
+    }
+
+    
+    .profile-img-box {
+        position: relative;
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+    }
+
+    .skill {
+        padding: 0.8rem;
+    }
+
+    .percent {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard {
+        width: 100%;
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+    .profile {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .profile-img-box {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+
+    .main {
+        padding: 0.5rem;
+    }
+
+    .skill {
+        padding: 0.5rem;
+    }
+
+    .percent {
+        font-size: 1rem;
+    }
+
+    .circle-1,
+    .circle-2,
+    .circle-3 {
+        display: none;
+    }
+}
